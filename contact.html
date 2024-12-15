@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <style>
+    /* Style général */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-image: url('image/contact.jpg'); /* Image de fond */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Barre de navigation */
+    .navbar {
+      background-color: pink;
+      overflow: hidden;
+      display: flex;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: block;
+      flex: 1;
+      text-align: center;
+    }
+
+    .navbar a:hover {
+      background-color: #f08fb8;
+    }
+
+    /* Centrage du titre */
+    h1 {
+      color: palevioletred; /* Titre en rose */
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    /* Conteneur principal centré */
+    .content {
+      text-align: center; /* Centrer le contenu */
+    }
+
+    /* Boutons de contact */
+    .contact-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center; /* Centrer les boutons */
+      margin-top: 20px;
+    }
+
+    .contact-buttons a, .contact-buttons button {
+      background-color: rgba(240, 143, 184, 0.9);
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px; /* Boutons plus petits */
+      border-radius: 5px;
+      font-size: 14px; /* Texte plus petit */
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s;
+    }
+
+    .contact-buttons a:hover, .contact-buttons button:hover {
+      background-color: rgba(227, 118, 168, 0.9);
+    }
+
+    .hidden-info {
+      margin-top: 20px;
+      font-size: 16px;
+      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+      text-align: center; /* Centrer les coordonnées */
+    }
+
+    /* Bouton retour à l'accueil */
+    .btn {
+      display: inline-block;
+      background-color: #f08fb8;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px; /* Bouton plus petit */
+      border-radius: 5px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      font-size: 16px; /* Texte plus petit */
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background-color: #e376a8;
+    }
+  </style>
+  <script>
+    function showContactInfo() {
+      const infoDiv = document.getElementById('contact-info');
+      infoDiv.style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <!-- Barre de navigation -->
+  <div class="navbar">
+    <a href="index.html">Accueil</a>
+    <a href="Presentation.html">Présentation</a>
+    <a href="page1.html">Expérience</a>
+    <a href="page2.html">Compétence</a>
+    <a href="page3.html">Loisir</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Contenu principal -->
+  <div class="content">
+    <h1>Contactez-moi</h1>
+    <div class="contact-buttons">
+      <a href="https://fr.linkedin.com/in/sarah-ghayate-1131ab327?original_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank">Me retrouver sur LinkedIn</a>
+      <button onclick="showContactInfo()">Afficher mes coordonnées</button>
+    </div>
+    <div id="contact-info" class="hidden-info" style="display: none;">
+      <p>Email : sarah.ghayate19@gmail.com</p>
+      <p>Téléphone : +33 6 51 42 11 94</p>
+    </div>
+
+    <!-- Bouton retour -->
+    <a href="index.html" class="btn">Retour à l'Accueil</a>
+  </div>
+</body>
+</html>

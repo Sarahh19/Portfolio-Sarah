@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Présentation</title>
+  <style>
+    /* Style général */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #ffe2f9; /* Bleu pâle */
+      color: black; /* Couleur du texte par défaut */
+    }
+
+    /* Barre de navigation */
+    .navbar {
+      background-color: pink;
+      overflow: hidden;
+      display: flex;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: block;
+      flex: 1;
+      text-align: center;
+    }
+
+    .navbar a:hover {
+      background-color: #f08fb8;
+    }
+
+    /* Contenu principal */
+    .content {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent pour le contenu */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Section 1 - Texte avec image à côté */
+    .section1 {
+      display: flex; /* Utilisation de Flexbox pour aligner le texte et l'image */
+      align-items: center; /* Centrer verticalement le contenu */
+      margin-bottom: 40px; /* Espacement entre les sections */
+    }
+
+    .section1 .text-box {
+      width: 60%; /* Largeur du texte */
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9); /* Fond blanc */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      color: black; /* Change le texte en noir */
+    }
+
+    .section1 img {
+      width: 35%; /* Taille de l'image à côté du texte */
+      margin-left: 20px; /* Espacement entre l'image et le texte */
+      border-radius: 8px;
+    }
+
+    /* Section 2 - Texte avec image à gauche */
+    .section2 {
+      display: flex; /* Utilisation de Flexbox pour aligner l'image et le texte */
+      align-items: center; /* Centrer verticalement le contenu */
+      margin-top: 20px; /* Espacement entre les sections */
+    }
+
+    /* Modifications de la section2 pour l'image à gauche */
+    .section2 img {
+      width: 40%; /* Réduit la taille de l'image à 40% */
+      margin-right: 20px; /* Espacement entre l'image et le texte */
+      border-radius: 8px;
+    }
+
+    .section2 .text-box {
+      width: 60%; /* Largeur du texte */
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9); /* Fond blanc */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #e376a8;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    /* Bouton retour à l'accueil */
+    .btn {
+      display: inline-block;
+      background-color: #f08fb8;
+      color: black;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn:hover {
+      background-color: #e376a8;
+    }
+
+    .btn-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barre de navigation -->
+  <div class="navbar">
+    <a href="index.html">Accueil</a>
+    <a href="Presentation.html">Présentation</a>
+    <a href="page1.html">Expérience</a>
+    <a href="page2.html">Compétence</a>
+    <a href="page3.html">Loisir</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="content">
+    <!-- Section 1 -->
+    <div class="section1">
+      <div class="text-box">
+        <h1>Mon Parcours et Mes Passions</h1>
+        <p>Depuis toujours, je suis passionnée par les mathématiques et les sciences. Ces matières m'ont toujours fascinée et m'ont permis de développer un esprit analytique et logique. J'aime relever des défis intellectuels et explorer des concepts nouveaux qui enrichissent mes connaissances.</p>
+        <p>Je suis une personne très souriante et volontaire. J'aime prendre des initiatives et je suis toujours prête à donner le meilleur de moi-même pour m'adapter aux besoins et aux situations. Que ce soit dans ma vie personnelle ou professionnelle, j'accorde une grande importance à l'organisation et au sens des responsabilités.</p>
+      </div>
+      <img src="image/enfant.jpg" alt="Enfant" />
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section2">
+      <img src="image/enfant2.jpg" alt="Enfant2" />
+      <div class="text-box">
+        <p>En plus de cela, j'ai de l'expérience dans la vente. J'ai travaillé en tant qu'employée polyvalente dans un magasin de jouets appelé Smyth Toys, ce qui m'a permis de développer mes compétences en communication et en gestion de clients.</p>
+        <p>J'ai également eu l'opportunité de faire du babysitting à plusieurs reprises, ce qui m'a appris à être responsable et attentive aux besoins des autres.</p>
+        <p>J'ai, de surcroît, participé à l'organisation d'une course contre la faim, en collaboration avec l'association Action Contre La Faim, une expérience enrichissante qui m'a permis de m'impliquer dans une cause humanitaire.</p>
+        <p>Enfin, j'ai eu l'occasion d'effectuer deux stages d'observation. Le premier avec des infirmières libérales, et le second dans une classe ULIS, ce qui m'a permis d'enrichir ma vision du monde du travail et d'explorer d'autres domaines professionnels. Le stage avec les infirmières libérales m'a appris à prendre des initiatives et à observer chaque détail; quant à celui dans une classe ULIS, il m'a appris à garder un sang froid dans toutes les situations et à gérer mon stress dans des situations inattendues.</p>
+        <p>Actuellement, je suis à la recherche d'un stage dans le domaine des systèmes embarqués pour la période de mai-juin 2025. Ce stage me permettra de mettre en pratique mes compétences techniques tout en continuant à apprendre et à évoluer dans un environnement stimulant.</p>
+      </div>
+    </div>
+
+    <!-- Bouton retour à l'accueil -->
+    <div class="btn-container">
+      <a href="index.html" class="btn">Retour à l'Accueil</a>
+    </div>
+  </div>
+
+</body>
+</html>

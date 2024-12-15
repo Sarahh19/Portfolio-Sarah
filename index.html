@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Sarah Ghayate</title>
+  <style>
+    /* Style général */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10;
+      padding: 10;
+      background-image: url('image/soleil.JPG'); /* Chemin relatif pour l'image */
+      background-size: cover; /* L'image couvre toute la fenêtre */
+      background-position: center; /* Centrer l'image */
+      background-repeat: no-repeat; /* Pas de répétition de l'image */
+      min-height: 100vh; /* Hauteur minimale : 100% de la hauteur de la fenêtre */
+    }
+
+    /* Barre de navigation */
+    .navbar {
+      background-color: rgba(255, 192, 203, 0.9); /* Couleur rose translucide */
+      overflow: hidden;
+      display: flex;
+      padding: 10px 0;
+    }
+
+    .navbar a {
+      flex: 1;
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      text-align: center;
+    }
+
+    .navbar a:hover {
+      background-color: #f08fb8;
+    }
+
+    /* Contenu principal */
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Effet d'ombre */
+      padding: 20px;
+      height: calc(100vh - 60px); /* Ajuster pour exclure la barre de navigation */
+      position: relative; /* Nécessaire pour le positionnement des éléments autour de l'image */
+      margin-top: 120px; /* Plus d'espace au-dessus du contenu */
+    }
+
+    h1 {
+      margin: 250px 0; /* Descendre encore plus le titre */
+      font-size: 2.5em;
+    }
+
+    p {
+      margin: 40px 0; /* Espacement autour des paragraphes */
+      font-size: 1.2em;
+      text-align: center;
+    }
+
+    a {
+      background-color: #f08fb8;
+      color: white;
+      padding: 15px 25px; /* Padding pour les liens */
+      margin: 20px 0; /* Espacement entre les liens */
+      text-decoration: none;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      border-bottom: 2px solid white; /* Ligne sous chaque bouton */
+      display: inline-block;
+      padding-top: 20px; /* Ajout d'espace au-dessus de chaque lien */
+    }
+
+    a:hover {
+      background-color: #e376a8;
+      border-bottom: 2px solid #e376a8; /* Change la couleur de la ligne lors du survol */
+    }
+
+    /* Bulle contenant l'image */
+    .bubble {
+      position: absolute;
+      top: 0px; /* Remonter la bulle */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 260px;
+      height: 250px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 50%; /* Donne la forme ronde */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre légère */
+      overflow: hidden;
+    }
+
+    /* Image à l'intérieur de la bulle */
+    .bubble img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%; /* L'image sera aussi ronde */
+    }
+
+    /* Zones de texte avec points d'interrogation autour de l'image */
+    .question-zones {
+      position: absolute;
+      top: 280px; /* Descendre les points d'interrogation un peu moins */
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 250px;
+      height: 250px;
+      position: relative;
+    }
+
+    /* Positionnement des points d'interrogation autour de l'image */
+    .question-zone {
+      position: absolute;
+      top: 195px; /* Descendre légèrement les points d'interrogation */
+      left: 0;
+      width: 30px;
+      height: 30px;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 10px;
+      border-radius: 50%;
+      font-size: 1.5em;
+      text-align: center;
+      color: #333;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transform-origin: center;
+    }
+
+    /* Rotation pour disposer les points autour de l'image */
+    .question-zone:nth-child(1) { transform: rotate(0deg) translateX(-700px); }
+    .question-zone:nth-child(2) { transform: rotate(-10deg) translateX(-700px); }
+    .question-zone:nth-child(3) { transform: rotate(-20deg) translateX(-700px); }
+    .question-zone:nth-child(4) { transform: rotate(-0deg) translateX(-350px); }
+    .question-zone:nth-child(5) { transform: rotate(-29deg) translateX(-500px); }
+    .question-zone:nth-child(6) { transform: rotate(10deg) translateX(-550px); }
+    .question-zone:nth-child(7) { transform: rotate(-25deg) translateX(-367px); }
+
+    /* Texte sous la bulle */
+    .text-below {
+      margin-top: 600px; /* Déplacer le texte plus bas */
+      text-align: center;
+    }
+
+    /* Style pour la section "À propos de moi" */
+    .about-me {
+      margin-top: 800px; /* Déplace la section encore plus bas */
+      padding: 20px;
+      background-color: #f08fb8; /* Fond rose */
+      color: rgb(3, 3, 3); /* Texte en noir pour améliorer le contraste */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(190, 9, 9, 0.3);
+      width: 80%;
+      max-width: 800px;
+      text-align: center;
+      margin-left: auto; /* Centrer horizontalement */
+      margin-right: auto; /* Centrer horizontalement */
+    }
+
+    .about-me h2 {
+      margin-bottom: 10px;
+      font-size: 1.5em;
+      color: #250125;
+    }
+
+    .about-me p {
+      font-size: 1em; /* Réduit la taille du texte */
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <!-- Barre de navigation -->
+  <div class="navbar">
+    <a href="index.html">Accueil</a>
+    <a href="Presentation.html">Présentation</a>
+    <a href="page1.html">Expérience</a>
+    <a href="page2.html">Compétence</a>
+    <a href="page3.html">Loisir</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Contenu principal -->
+  <div class="content">
+    <!-- Bulle avec l'image moi.jpg -->
+    <div class="bubble">
+      <img src="image/moi.jpg" alt="Moi" />
+    </div>
+
+    <!-- Zones de texte avec points d'interrogation autour de l'image -->
+    <!-- <div class="question-zones">
+      <div class="question-zone">?</div>
+      <div class="question-zone">?</div>
+      <div class="question-zone">?</div>
+      <div class="question-zone">?</div>
+      <div class="question-zone">?</div>
+      <div class="question-zone">?</div>
+      <div class="question-zone">?</div>
+    </div>-->
+
+    <!-- Texte sous la bulle -->
+    <div class="text-below">
+      <h1>Qui est Sarah Ghayate ?</h1>
+      <p>Découvrez qui je suis....</p>
+      <a href="Presentation.html">Je me présente</a>
+      <p></p>
+      <a href="page1.html">Découvrir mes expériences</a>
+      <p></p>
+      <a href="page2.html">Découvrir mes compétences</a>
+      <p></p>
+      <a href="page3.html">Découvrir mes loisirs</a>
+    </div>
+  </div>
+
+  <!-- Section "À propos de moi" -->
+  <div class="about-me">
+    <h2>À propos de moi</h2>
+    <p>Bonjour, je m'appelle Sarah Ghayate. J'ai 20 ans et je suis actuellement en première année d'école d'ingénieur à l'École d'Ingénieur Denis Diderot (EIDD).</p>
+  </div>
+</body>
+</html>

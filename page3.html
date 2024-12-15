@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loisir</title>
+  <style>
+    /* Style général */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-image: url('image/voyage.jpg'); /* Image de fond */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white; /* Couleur du texte pour contraster */
+    }
+
+    /* Barre de navigation */
+    .navbar {
+      background-color: pink;
+      overflow: hidden;
+      display: flex;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: block;
+      flex: 1;
+      text-align: center;
+    }
+
+    .navbar a:hover {
+      background-color: #f08fb8;
+    }
+
+    /* Contenu principal dans une bulle ronde */
+    .content {
+      background-color: rgba(0, 0, 0, 0.6); /* Boîte noire semi-transparente */
+      color: white;
+      max-width: 600px; /* Réduit la taille */
+      margin: 200px auto; /* Centrage plus adapté */
+      padding: 30px;
+      border-radius: 50%; /* Donne une forme ronde */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour un effet flottant */
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 600px; /* Hauteur ajustée */
+      width: 600px; /* Assure une forme circulaire */
+      position: relative; /* Nécessaire pour la gestion des enfants */
+    }
+
+    h1 {
+      color: palevioletred; /* Texte doré pour se démarquer */
+      margin-bottom: 20px;
+    }
+
+    p, ul {
+      margin-bottom: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    /* Style de l'image du gâteau */
+    .content img.gateau {
+      position: absolute; /* Position absolue */
+      top: -135px; /* Montée de l'image */
+      right: -425px; /* Décalage de 1 cm vers la droite */
+      width: 300px; /* Taille réduite */
+      height: auto;
+      border-radius: 15px; /* Coins arrondis */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Ombre légère */
+    }
+
+    /* Style de l'image voyage2 */
+    .section2 img.voyage2 {
+      float: left; /* Aligne à gauche */
+      margin: 20px 0 20px 20px; /* Espace entre les autres éléments */
+      width: 300px; /* Taille ajustée */
+      height: auto;
+      border-radius: 10px; /* Coins arrondis */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Ombre légère */
+    }
+
+    /* Style de l'image visite (symétrique à gateau) */
+    .section2 img.visite {
+      float: right; /* Aligne à droite */
+      margin: 20px 20px 20px 0; /* Espace entre les autres éléments */
+      width: 300px; /* Taille ajustée */
+      height: auto;
+      border-radius: 10px; /* Coins arrondis */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Ombre légère */
+    }
+
+    /* Style de l'image voyage3 */
+    .section2 img.voyage3 {
+      position: absolute; /* Position absolue */
+      top: 120px; /* Déplacement de l'image vers le bas */
+      left: 15px; /* Décalage de 1 cm vers la droite */
+      width: 280px; /* Taille réduite */
+      height: auto;
+      border-radius: 15px; /* Coins arrondis */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Ombre légère */
+    }
+
+    /* Bouton retour à l'accueil */
+    .btn {
+      display: inline-block;
+      background-color: #f08fb8;
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px; /* Taille du bouton */
+      border-radius: 5px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      font-size: 18px; /* Texte plus grand */
+      position: absolute; /* Positionnement absolu par rapport au parent */
+      bottom: -350px; /* Ajusté pour la descente du bouton */
+      left: 50%; /* Centre horizontalement */
+      transform: translateX(-50%); /* Ajuste la position exacte pour centrer */
+    }
+
+    .btn:hover {
+      background-color: #e376a8;
+    }
+  </style>
+</head>
+<body>
+  <!-- Overlay -->
+  <div>
+    <!-- Barre de navigation -->
+    <div class="navbar">
+      <a href="index.html">Accueil</a>
+      <a href="Presentation.html">Présentation</a>
+      <a href="page1.html">Expérience</a>
+      <a href="page2.html">Compétence</a>
+      <a href="page3.html">Loisir</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Contenu principal dans une bulle ronde -->
+    <div class="content">
+      <h1>Mes loisirs</h1>
+      <p>Dans mon temps libre, j'aime faire plusieurs activités qui me passionnent et me détendent :</p>
+      <ul>
+        <li><strong>Lire :</strong> Les livres me transportent dans d'autres mondes et enrichissent mes connaissances. Je lis de la romance, de la science-fiction et même du théâtre.</li>
+        <li><strong>Cuisiner :</strong> J'adore cuisiner des plats salés mais aussi, et surtout, des desserts sucrés, pour le plus grand plaisir de ma famille !</li>
+        <li><strong>Faire du sport :</strong> La natation a toujours fait partie de ma vie, mais je pratique aujourd'hui des sports de combat comme la boxe et le kempo.</li>
+        <li><strong>Voyager :</strong> Découvrir de nouveaux endroits avec ma famille et mes amies est une source de joie et de souvenirs inoubliables.</li>
+      </ul>
+
+      <img src="image/gateau.jpg" alt="Gateau" class="gateau"/>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section2">
+      <img src="image/voyage2.jpg" alt="Voyage" class="voyage2" />
+      <img src="image/visite.jpg" alt="Visite" class="visite" />
+      <img src="image/voyage3.jpg" alt="Voyage3" class="voyage3" />
+
+      <!-- Bouton retour -->
+      <a href="index.html" class="btn">Retour à l'Accueil</a>
+    </div>
+  </div>
+</body>
+</html>
